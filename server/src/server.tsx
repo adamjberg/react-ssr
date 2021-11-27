@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
-import { App } from "../../client/src/app";
+import { App } from "../../client/src/App";
 
 const app = express();
 
@@ -22,5 +22,7 @@ app.get('/', (req, res) => {
         );
     });
 });
+
+app.use(express.static("./built"));
 
 app.listen(4242);

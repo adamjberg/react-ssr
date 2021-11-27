@@ -5,7 +5,7 @@ export const App: React.FC = () => {
 
     useEffect(() => {
         setClientMessage("Hello from the client!")
-    }, []);
+    }, [setClientMessage]);
 
     return <>
         <h1>Hello from the server!</h1>

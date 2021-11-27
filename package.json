@@ -1,10 +1,13 @@
 {
   "name": "react-ssr",
   "version": "1.0.0",
-  "description": "`mkdir react`",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild server/src/server.tsx --bundle --outfile=built/server.js --platform=node"
+    "build": "npm run server:build && npm run client:build",
+    "server:build": "esbuild server/src/server.tsx --bundle --outfile=built/server.js --platform=node",
+    "client:build": "esbuild client/src/index.tsx --bundle --outfile=built/app.js",
+    "start": "node built/server.js"
   },
   "author": "",
   "license": "ISC",
